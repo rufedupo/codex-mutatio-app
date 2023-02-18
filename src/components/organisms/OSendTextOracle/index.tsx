@@ -144,8 +144,8 @@ export default function OSendTextOracle() {
                     </Paper>
                     <Box sx={{textAlign: '-webkit-center', padding:'10px'}}>
                         <Typography variant='caption' color='rgb(255 111 111)' component="div">JOGUE AS MOEDAS 6 VEZES PARA OBTER OS HEXAGRAMAS PRINCIPAL E COMPLEMENTAR</Typography>
-                        <AImage image='images/cara.png' />
-                        <AImage image='images/coroa.png'/>
+                        <AImage image='https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/cara.png' alt='cara' width={100} height={100} />
+                        <AImage image='https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/coroa.png' alt='coroa' width={100} height={100} />
                         <Typography variant='h6' color='rgb(255 111 111)' component="div">{coinTime}/6 VEZES</Typography>
                         <Button variant="contained" startIcon={<TollIcon />} 
                         color="error"

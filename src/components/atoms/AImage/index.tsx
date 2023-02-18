@@ -1,10 +1,14 @@
+import { Avatar } from "@mui/material";
+
 interface AIconButtonProps {
     image: any,
-    alt?: string
+    alt?: string,
+    width: number,
+    height: number
 }
 
-export default function AImage({image, alt}: AIconButtonProps) {
+export default function AImage({image, alt, width, height}: AIconButtonProps) {
     return (
-        <img src={require(image)} alt={alt} />
+        <Avatar src={image} sx={{ width: {width}, height: {height}}}/>
     );
 }
