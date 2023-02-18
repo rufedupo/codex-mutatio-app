@@ -54,8 +54,8 @@ const columnsCalculate = [
   ];
 
 const coins = [
-    { id: 0, name: 'cara', value: 3, image: 'https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/faceCoin.png' },
-    { id: 1, name: 'coroa', value: 2, image: 'https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/crownCoin.png' }
+    { id: 0, name: 'cara', value: 3, image: 'https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/coins/faceCoin.png' },
+    { id: 1, name: 'coroa', value: 2, image: 'https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/coins/crownCoin.png' }
 ];
 
 const yinYangs = [
