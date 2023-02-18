@@ -144,6 +144,7 @@ const codeHexagrams = [
 ]
 
 let rowsCalculate: any[] = [];
+let hexagramsLogList: any[] = [];
 
 export default function OSendTextOracle() {
     const [ question, setQuestion ] = useState('');
@@ -213,6 +214,12 @@ export default function OSendTextOracle() {
         console.log(symbolOutsideComplement);  
         console.log(symbolInsideComplement);  
         console.log(hexagramComplement);
+        let count = 0;
+        codeHexagrams.forEach(c => {
+            hexagramsLogList[count] = c.code + ' = ' + symbols.find(s => s.id === c.outside)?.name + '/'+ symbols.find(s => s.id === c.inside)?.name;
+            count++;
+        });
+        console.log(hexagramsLogList);
     }
 
     const onClickInfoOracle = () => {
