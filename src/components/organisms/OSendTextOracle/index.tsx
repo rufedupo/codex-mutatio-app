@@ -253,7 +253,11 @@ export default function OSendTextOracle() {
             let yinYang = yinYangs.find((yy) => yy.value == sumCoins);
             rowsCalculate[coinTime] = { 
                 id: coinTime,
-                values: [oneCoin.image, twoCoin.image, threeCoin.image],
+                values: [
+                    {id: 1, image: oneCoin.image},
+                    {id: 2, image: twoCoin.image},
+                    {id: 3, image: threeCoin.image}
+                ],
                 sum: oneCoin.value+'+'+twoCoin.value+'+'+threeCoin.value+'='+sumCoins,
                 name: yinYang?.name,
                 principal: yinYang?.principal,
@@ -416,8 +420,8 @@ export default function OSendTextOracle() {
                                         <StyledTableRow key={'row_'+row.id}>
                                             <StyledTableCell key={'row_'+row.id+'_value'} component="th" scope="column">
                                                 <Box display='flex'>
-                                                    {row.values.map((image: any) => (
-                                                        <AAvatar image={image} alt='coroa' width={20} height={20} />
+                                                    {row.values.map((coin: any) => (
+                                                        <AAvatar key={'row_'+row.id+'_avatar_'+coin.id} image={coin.image} width={20} height={20} />
                                                     ))}
                                                 </Box>
                                             </StyledTableCell>
@@ -457,8 +461,8 @@ export default function OSendTextOracle() {
                                     <TableBody>
                                         <StyledTableRow>
                                             <StyledTableCell align='left' sx={{ backgroundColor: '#ac001c', color: '#e6ce5f', paddingTop: '5px', paddingBottom: '5px'}}><Typography variant='overline'>Hexagrama</Typography></StyledTableCell>
-                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramPrincipal?.image} width={100} height={69} alt='Hexagrama Principal' /></StyledTableCell>
-                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramComplement?.image} width={100} height={69} alt='Hexagrama Complementar' /></StyledTableCell>
+                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramPrincipal?.image ? hexagramPrincipal?.image : ''} width={100} height={69} alt='Hexagrama Principal' /></StyledTableCell>
+                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramComplement?.image ? hexagramComplement?.image : ''} width={100} height={69} alt='Hexagrama Complementar' /></StyledTableCell>
                                         </StyledTableRow>
                                         <StyledTableRow>
                                             <StyledTableCell align='left' sx={{ backgroundColor: '#ac001c', color: '#e6ce5f', paddingTop: '5px', paddingBottom: '5px' }}><Typography variant='overline'>Significado</Typography></StyledTableCell>
