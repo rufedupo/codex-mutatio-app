@@ -5,3 +5,11 @@
   min-height: 100vh;
   background-color: #25252B;
 }
+
+.imgCara {
+  background-image: url('../images/cara.png');
+}
+
+.imgCoroa {
+  background-image: url('../images/coroa.png');
+}

@@ -22,7 +22,7 @@ export default function MSendField({placeholder, change, focus, blur, click, val
                 elevation={6}
             >
                 <AInputBase placeholder={placeholder} change={change} focus={focus} blur={blur} value={value}  />
-                <AIconButton icon={<SendIcon />} click={click} />
+                <AIconButton icon={<SendIcon />} click={click} disabled={value===''} />
             </Paper>
         </Box>
     );
