@@ -1,12 +1,13 @@
-import { List, ListItem, Paper, Typography, ListItemText } from "@mui/material";
+import { List, ListItem, Paper, Typography, ListItemText, Box } from "@mui/material";
 
 interface MStepListProps {
     title: string,
     description: string,
+    stepsTitle: string,
     steps: string[]
 }
 
-export default function MStepList({title, description, steps}: MStepListProps) {
+export default function MStepList({title, description, stepsTitle, steps}: MStepListProps) {
     return (
         <Paper sx={{ 
             p: '2px 4px', 
@@ -17,6 +18,9 @@ export default function MStepList({title, description, steps}: MStepListProps) {
         }}  square>
             <Typography variant='h6'>{title}</Typography><br/>
             <Typography variant='caption'>{description}</Typography>
+            <Box sx={{paddingTop: '10px'}}>
+                <Typography variant='subtitle2'>{stepsTitle}</Typography>
+            </Box>
             <List dense={true}>
                 {steps.map(s => 
                     <ListItem key={"step_"+s.substring(0)}>

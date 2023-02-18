@@ -38,12 +38,11 @@ const StyledTableRow = styled(TableRow)(() => ({
   }));
 
 const steps: string[] = [
-    '0É um bom momento para mudar de emprego?',
-    '1Há algo que possa fazer para acelerar minha cura?',
-    '2O que está atrapalhando o bom entendimento com meu parceiro?',
-    '3Como faço para que meu chefe confie mais em minha capacidade?',
-    '4É aconselhável iniciar tal projeto?',
-    '5É conveniente tocar o projeto sozinho ou com algum sócio?'
+    '0- É um bom momento para mudar de emprego?',
+    '1- Há algo que possa fazer para acelerar minha cura?',
+    '2- O que está atrapalhando o bom entendimento com meu parceiro?',
+    '3- Como faço para que meu chefe confie mais em minha capacidade?',
+    '4- É aconselhável iniciar tal projeto?'
 ]
 
 const columnsCalculate = [
@@ -343,6 +342,7 @@ export default function OSendTextOracle() {
                     <MStepList
                         title='Formulação da pergunta'
                         description='Para que o Oráculo seja claro em sua resposta, a pergunta deve ser bem formulada. Obviamente, não tem sentido fazer perguntas muito genéricas, do tipo: Serei feliz? Sou atraente? Vou ganhar na Mega Sena? Ou qualquer outra pergunta cuja resposta se limite a "sim" ou "não".'
+                        stepsTitle='Alguns exemplos de perguntas bem formuladas podem ajudar:'
                         steps={steps} />
                 </Collapse>
                 <Collapse in={!questionSended} sx={{width: '800px'}} >
