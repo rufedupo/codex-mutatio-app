@@ -391,7 +391,7 @@ export default function OSendTextOracle() {
                         <Box display='flex' justifyContent='space-between'>
                             <Box sx={{ marginTop: '15px' }}>
                                 <AAvatar image={coins[0].image} alt='cara' width={100} height={100} />
-                                <Typography variant='caption' color='#d7cfa5' component="div">CARA</Typography>
+                                <Typography variant='caption' color='#d7cfa5' component="div">CARA (3)</Typography>
                             </Box> 
                             <Box>
                                 <Typography variant='h6' color='rgb(255 111 111)' component="div">{coinTime}/6 VEZES</Typography>
@@ -412,7 +412,7 @@ export default function OSendTextOracle() {
                             </Box>
                             <Box sx={{ marginTop: '15px' }}>
                                 <AAvatar image={coins[1].image} alt='coroa' width={100} height={100} />
-                                <Typography variant='caption' color='#847129' component="div">COROA</Typography>
+                                <Typography variant='caption' color='#847129' component="div">COROA (2)</Typography>
                             </Box>   
                         </Box>
                     </Box>
