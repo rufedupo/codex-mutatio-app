@@ -331,8 +331,8 @@ export default function OSendTextOracle() {
         <Box>
             <Box>
                 <Collapse in={hiddenLogo&&!questionSended}>
-                    <Box sx={{textAlign: '-webkit-center', paddingTop: '50px'}}>
-                        <AAvatar image='https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/iconPage/TartugaMutatioInvertido.png' alt='turtle' height={250} width={250} variant='circular' />
+                    <Box sx={{textAlign: '-webkit-center', paddingTop: '30px'}}>
+                        <AAvatar image='https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/iconPage/TartugaMutatioColor.png' alt='turtle' height={250} width={250} variant='circular' />
                         <Typography variant='h3' sx={{
                             fontFamily: 'babylonica',
                             color: '#e6ce5f'
