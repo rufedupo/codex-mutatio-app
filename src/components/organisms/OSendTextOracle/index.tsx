@@ -248,9 +248,9 @@ export default function OSendTextOracle() {
 
     const onClickCoinButton = () => {
         if (coinTime < 6) { 
-            let oneCoin = coins[Math.floor(Math.random() * 2)];
-            let twoCoin = coins[Math.floor(Math.random() * 2)];
-            let threeCoin = coins[Math.floor(Math.random() * 2)];
+            let oneCoin = coins[Math.round(Math.random() * 100)%2];
+            let twoCoin = coins[Math.round(Math.random() * 100)%2];
+            let threeCoin = coins[Math.round(Math.random() * 100)%2];
             let sumCoins = oneCoin.value + twoCoin.value + threeCoin.value;
             let yinYang = yinYangs.find((yy) => yy.value == sumCoins);
             rowsCalculate[coinTime] = { 
