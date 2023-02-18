@@ -215,6 +215,7 @@ let rowsCalculate: any[] = [];
 export default function OSendTextOracle() {
     const [ question, setQuestion ] = useState('');
     const [ focusText, setFocusText ] = useState(false);
+    const [ hiddenLogo, setHiddenLogo ] = useState(true);
     const [ questionSended, setQuestionSended ] = useState(false);
     const [ coinTime, setCoinTimes ] = useState(0);
     const [ displayCalculate, setDisplayCalculate ] = useState('none');
@@ -242,6 +243,7 @@ export default function OSendTextOracle() {
 
     const handleFocusInput = () => {
         setFocusText((prev) => !prev);
+        setHiddenLogo((prev) => !prev)
     };
 
     const onClickCoinButton = () => {
@@ -328,13 +330,21 @@ export default function OSendTextOracle() {
     return (
         <Box>
             <Box>
+                <Collapse in={hiddenLogo&&!questionSended}>
+                    <Box sx={{textAlign: '-webkit-center', paddingTop: '50px'}}>
+                        <AAvatar image='https://raw.githubusercontent.com/rufedupo/codex-mutatio-app/main/public/assets/images/iconPage/TartugaMutatioInvertido.png' alt='turtle' height={250} width={250} variant='circular' />
+                        <Typography variant='h3' sx={{
+                            fontFamily: 'babylonica',
+                            color: '#e6ce5f'
+                        }}>Codex Mutatio</Typography>
+                    </Box>
+                </Collapse>
                 <Collapse in={focusText} sx={{width: '800px'}} >
                     <MStepList
                         title='Formulação da pergunta'
                         description='Para que o Oráculo seja claro em sua resposta, a pergunta deve ser bem formulada. Obviamente, não tem sentido fazer perguntas muito genéricas, do tipo: Serei feliz? Sou atraente? Vou ganhar na Mega Sena? Ou qualquer outra pergunta cuja resposta se limite a "sim" ou "não".'
                         steps={steps} />
                 </Collapse>
-
                 <Collapse in={!questionSended} sx={{width: '800px'}} >
                     <Box sx={{  
                         position: 'fixed',
