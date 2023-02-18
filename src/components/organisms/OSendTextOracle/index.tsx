@@ -457,8 +457,8 @@ export default function OSendTextOracle() {
                                     <TableBody>
                                         <StyledTableRow>
                                             <StyledTableCell align='left' sx={{ backgroundColor: '#ac001c', color: '#e6ce5f', paddingTop: '5px', paddingBottom: '5px'}}><Typography variant='overline'>Hexagrama</Typography></StyledTableCell>
-                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramPrincipal?.image} width={100} height={69} /></StyledTableCell>
-                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramComplement?.image} width={100} height={69} /></StyledTableCell>
+                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramPrincipal?.image} width={100} height={69} alt='Hexagrama Principal' /></StyledTableCell>
+                                            <StyledTableCell sx={{textAlign: '-webkit-center', paddingTop: '5px', paddingBottom: '0px' }}><AImageHexagram src={hexagramComplement?.image} width={100} height={69} alt='Hexagrama Complementar' /></StyledTableCell>
                                         </StyledTableRow>
                                         <StyledTableRow>
                                             <StyledTableCell align='left' sx={{ backgroundColor: '#ac001c', color: '#e6ce5f', paddingTop: '5px', paddingBottom: '5px' }}><Typography variant='overline'>Significado</Typography></StyledTableCell>

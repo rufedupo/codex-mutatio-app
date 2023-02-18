@@ -1,15 +1,17 @@
 import { Box } from "@mui/material"
+import Image from "next/image"
 
 interface AImageHexagramProps {
     src: any,
     width: number,
-    height: number
+    height: number,
+    alt: string
 }
 
-export default function AImageHexagram({src, width, height}: AImageHexagramProps) {
+export default function AImageHexagram({src, width, height, alt}: AImageHexagramProps) {
     return (
         <Box>
-            <img src={src} width={width} height={height} />
+            <Image src={src} width={width} height={height} alt={alt} />
         </Box>
     )
 }
